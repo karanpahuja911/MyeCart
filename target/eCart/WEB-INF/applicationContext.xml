@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:security="http://www.springframework.org/schema/security" 
 
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	 http://www.springframework.org/schema/beans/spring-beans.xsd
-">
-
+	 http://www.springframework.org/schema/security 
+         http://www.springframework.org/schema/security/spring-security.xsd">
 
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -32,16 +33,32 @@
 			</list>
 		</property>
 	</bean>
+		
 
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
-
-	<bean id="multipartResolver"
-		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		<property name="maxUploadSize" value="10240000" />
-	</bean>
-
-
+	
+	<security:http auto-config="true">
+		<security:intercept-url pattern="/admin/**"
+			access="ROLE_ADMIN" />
+		<security:intercept-url pattern="/customer/**"
+			access="ROLE_USER" />
+		<security:form-login login-page="/logIn"
+			default-target-url="/" authentication-failure-url="/logIn?error"
+			username-parameter="form-username" password-parameter="form-password" />
+		<security:logout logout-success-url="/logIn?logout" />
+	</security:http>
+	<security:authentication-manager>
+		<security:authentication-provider>
+			
+			<security:jdbc-user-service
+				data-source-ref="dataSource"
+				authorities-by-username-query="SELECT username, role FROM admin WHERE username = ?"
+				users-by-username-query="SELECT username, password, enabled FROM user WHERE username = ?" />
+		</security:authentication-provider>
+	</security:authentication-manager>
+	
+	
 </beans>

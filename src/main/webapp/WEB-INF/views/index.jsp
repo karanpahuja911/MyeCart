@@ -49,7 +49,7 @@
       </div>
     
       <div class="item">
-        <img src="resources/images/AllGad2.png" style="width:100%;" height="80%;">
+        <img src="resources/images/AllGad2.png" width:100%;" height="80%;">
         <div class="carousel-caption">
           <h2>Coming Soon</h2>
           <p>Stay Tuned</p>

@@ -1,36 +1,53 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-
 <footer class="container-fluid bg-5" style="width:100%;">
    <h2><b></b></h2>
+ 
 <div>
+<font face="Papyrus" size="3" color="Tomato">
 <h3>Head Office Address</h3>
-
-1763 B, SECTOR 46<br>
-Hudda Colony, <br>
+SECTOR 46<br>
+Greenwood City<br>
 Gurgaon-122003 <br>
-HARYANA-123029 <br>
+HARYANA-123029 <br> </font>
 </div>
 
 <div class="text-right " align="justify" style:"padding">
-Telephone: +91-78-38513867<br>
-100% ORIGINAL guarantee for all products at FFShopify.com
+<font face="Papyrus" size="3" color="Tomato">Telephone: +91-8398937949<br>
+100% ORIGINAL guarantee for all products at eCartShopify.com
 <br>
 Return within  15 days of placing your order.<br>
-Get free delivery for every order above Rs. 2000
+Get free delivery for every order above Rs. 1000 </font>
 </div>
 <div class="text-center">
-<h4><a href="#">& All rights reserved </a> <b>-------</b> <a href="#">Privacy Policy </a> <b>-------</b> <a href="#">Terms & Conditions</a></h4>
+<h4><a href="#"> <font face="Papyrus" size="4" color="Tomato">All rights reserved</font> </a> <b>--</b> <a href="#"><font face="Papyrus" size="4" color="Tomato">Privacy Policy </font> </a> <b>--</b> <a href="#"><font face="Papyrus" size="5" color="Tomato">Terms & Conditions </font></a></h4>
 </div>
-</footer>
 
+<!-- Container (Contact Section) -->
+<div class="container-fluid bg-grey">
+  <h2 class="text-center"><font face="Papyrus" size="4" color="Tomato">Subscribe for Updates</font></h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p><b><font face="Papyrus" size="3" color="YellowGreen">Contact us and we'll get back to you within 24 hours. </font></b></p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> <b><i><font face="Papyrus" size="3" color="YellowGreen">New Delhi, INDIA</font></i></b></p>
+      <p><span class="glyphicon glyphicon-phone"></span> <font face="Papyrus" size="3" color="YellowGreen">+011 1515151515</font></p>
+      <p><span class="glyphicon glyphicon-envelope"></span><font face="Papyrus" size="3" color="YellowGreen"> myemail@something.com</font></p>
+    </div>
+    <div class="col-sm-7">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="3"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+</footer>
 </body>
 </html>
-
-
-
-
-
-
 
 <!-- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> -->

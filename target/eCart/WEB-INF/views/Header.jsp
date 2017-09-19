@@ -1,109 +1,119 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>MyeCart</title>
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <style>
 .w3-lobster {
-    font-family: "Lobster", serif;
-}
-  
-  
-    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
-    .navbar {
-      margin-bottom: 20px;
-      border-radius: 0;
-    }
-    
-	header {
-      background-color: SlateBlue;
-      padding: 2px;
-    }
-    .navbar-fixed-top {
-min-height: 100px;
+	font-family: "Lobster", serif;
 }
 
-@media (min-width: 768px) {
+/* Remove the navbar's default rounded borders and increase the bottom margin */
 .navbar {
-border-radius: 4px;
-min-height: 10px;
- }
+	margin-bottom: 20px;
+	border-radius: 0;
 }
-    
-    .button-custom,
-.button-custom .icon:before{
-  font-size: 14px;
+
+header {
+	background-color: Tomato;
+	padding: 2px;
 }
-   
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color:Teal;>
-      padding: 20px;
-      
-     }
-     
-      #googleMap {
-      width: 100%;
-      height: 400px;
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
-  }  
-     
-   
-  </style>
+
+.navbar-fixed-top {
+	min-height: 100px;
+}
+
+@media ( min-width : 768px) {
+	.navbar {
+		border-radius: 4px;
+		min-height: 10px;
+	}
+}
+
+.button-custom, .button-custom .icon:before {
+	font-size: 14px;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+	background-color: DimGrey; >
+	padding: 20px;
+}
+
+#googleMap {
+	width: 100%;
+	height: 400px;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+</style>
 </head>
-<body style="background-color:YellowGreen;">
+<body background="resources/images/backe7.jpg">
 
-
-  <div class="container text-center w3-lobster" >
-  <div  font-family:"Courier New">
-    <h3> Welcome To FLYING FASHION </h3>      
-    <p> <b>Best Online Shopping </b></p>
+	<div class="container text-center w3-lobster">
+		<div font-family:"chiller">
+    <h3><font face="Chiller" size="5" color="RoyalBlue">Welcome To eCart Shopify </font> </h3>      
+    <p> <b><font face="Chiller" size="5" color="RoyalBlue">Best Online Shopping </font></b></p>
   </div>
+
+  
 </div>
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#"><font face="Kristen ITC"
+				color="RoyalBlue">eCart</a>
+		</div>
+		<ul class="nav navbar-nav">
 
+			<li class="active"><a href="<c:url value="/home"/>"> <font
+					face="Papyrus" size="5">Home</font></a></li>
+			<li class="dropdown"><a href="<c:url value="/getAllProduct"/>">
+					<font face="Comic Sans MS" size="5">Products</font>
+			</a></li>
+			<li><a href="<c:url value="/Contact"/>"> <font
+					face="Papyrus" size="5">24*7 Customer Care</font></a></li>
+				<li><a href="<c:url value="/saveProduct"/>"> <font
+					face="Papyrus" size="5">Add Product</font></a></li>
+		</ul>
 
+		<form class="navbar-form navbar-left">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search">
+				<div class="input-group-btn">
+					<button class="btn btn-default" type="submit">
+						<i class="glyphicon glyphicon-search"></i>
+					</button>
+				</div>
+			</div>
+		</form>
 
-
-av class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#myPage">HOME</a></li>
-        <li><a href="#band">All Products</a></li>
-        <li><a href="#tour">24*7 Customer Care</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
-          <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Merchandise</a></li>
-            <li><a href="#">Extras</a></li>
-            <li><a href="#">Media</a></li> 
-          </ul>
-        </li>
-        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-</head>
-<body>
-
-</body>
-</html>
+		<ul class="nav navbar-nav navbar-right">
+			<c:if test="${pageContext.request.userPrincipal.name != null}">
+				<li><a>Welcome: ${pageContext.request.userPrincipal.name}</a></li>
+				<li><a href="<c:url value="/j_spring_security_logout"/>">Logout</a></li>
+			</c:if>
+			<c:if test="${pageContext.request.userPrincipal.name==null }">
+				<li><a hr
+			ef="<c:url value="/SignUp"/>"> <span
+						class="glyphicon glyphicon-user"></span> <font face="Comic Sans MS"
+						size="5">Sign Up</font></a></li>
+				<li><a href="<c:url value="/logIn"/>"> <span
+						class="glyphicon glyphicon-log-in"></span> <font face="Papyrus"
+						size="5"> Login</font></a></li>
+			</c:if>
+		</ul>
+	</div>
+	</nav>
