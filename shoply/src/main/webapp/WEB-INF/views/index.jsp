@@ -81,9 +81,9 @@
 
 <div class="container text-center">
   <h3>eCart</h3>....
-  <p><em>eCart is an electronic commerce company headquartered in Bangalore, Karnataka0 It was founded in October 2007 by Sachin Bansal and Binny Bansal (no relation).
+  <p><em>eCart is an electronic commerce company headquartered in New Delhi, India It was founded in October 2017 by Karan Pahuja.
   </em></p>
-  <p>eCart has launched its own product range under the name "DigiFlip" with products including tablets, USBs, and Appliances.</p>
+  <p>eCart has launched its own product range under the name "DigiFlip" with products including Laptops, Mobile Phones,USBs, and Appliances, Lifestyle, </p>
 </div>
 
     <div class="col-sm-4"> 
@@ -115,7 +115,7 @@
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">Sandals and Slippers</div>
-        <div class="panel-body"><img src="<c:url value="/resources/images/p7.jpg"/>" class="img-responsive" style="width:110%" alt="Image"></div>
+        <div class="panel-body"><img src="<c:url value="/resources/images/p7.jpeg"/>" class="img-responsive" style="width:110%" alt="Image"></div>
         <div class="panel-footer">Get Merchandise 30%off</div>
       </div>
     </div>
@@ -147,7 +147,7 @@
       </div>
     </div>
     <div class="col-sm-4">
-      <p class="text-center"><strong>HOME & DECOR </strong></p><br>
+      <p class="text-center"><strong> HOME & DECOR </strong></p><br>
       <a href="#demo2" data-toggle="collapse">
         <img src="<c:url value="/resources/images/Decor5.jpg"/>" class="img-circle person" alt="Random Name" width="255" height="255">
       </a>
