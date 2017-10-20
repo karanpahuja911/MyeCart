@@ -4,6 +4,7 @@ package com.niit.eCart.service;
 	import org.springframework.stereotype.Service;
 
 import com.niit.eCart.dao.CartItemDao;
+import com.niit.eCart.model.Cart;
 import com.niit.eCart.model.CartItem;
 
 	@Service
@@ -17,16 +18,16 @@ import com.niit.eCart.model.CartItem;
 			cartItemDao.addCartItem(cartItem);			
 		}
 
-		public void removeAllCartItems(int cartId) {
-			cartItemDao.removeCartItem(cartId);
-			
-		}
+		 public void removeCartItem(CartItem cartItem){
+		        cartItemDao.removeCartItem(cartItem);
+		    }
 
+		    public void removeAllCartItems(Cart cart){
+		        cartItemDao.removeAllCartItems(cart);
+		    }
 
-		public void removeCartItem(int cartItemId) {
-			cartItemDao.removeCartItem(cartItemId);
-			
-		}
-
-
+		    public CartItem getCartItemByProductId(int productId){
+		        return cartItemDao.getCartItemByProductId(productId);
+		    }
+	
 	} 

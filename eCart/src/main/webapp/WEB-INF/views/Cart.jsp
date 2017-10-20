@@ -1,51 +1,57 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-     <%@ include file="Header.jsp" %>
-     
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-<div>
-<div>
-<c:url value="/cart/clearcart/${cart.id }" var="clear"></c:url>
-<a href="${clear }" class="btn btn-danger pull-left">
-<span class="glyphicon glypicon-remove-sign"></span>
-Clear Cart</a>
-<a href="<c:url value="/cart/shippingaddressform/${cart.id}"></c:url>" class="btn btn-success pull-right">
-<span class="gylphicon glypicon-shopping-cart"></span>
-Check Out</a>
-<table class="table table-striped">
-<thead>
-<tr>
-<th>Name</th>
-<th>Quantity</th>
-<th>Total Price</th>
-<th>Remove</th>
-</tr>
-</thead>
-<c:set var="grandTotal" value="0"></c:set>
-<c:forEach items="${cart.cartItems }" var="cartItems">
-<tr>
-<td>${cartItems.product.pname }</td>
-<td>${cartItems.quantity}</td>
-<td>${cartItems.totalPrice}</td>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ include file="Header.jsp" %>
 
-<c:url value="/cart/removecartitem/${cartItems.cartItemId }" var="remove"></c:url>
-<td><a href="${remove}" class="label-danger pull-left">
-<c:set var="grandTotal" value="${cartItems.totalPrice+grandTotal }"></c:set>
-<span class="glyphicon glypicon-remove"></span>
-Remove
-</a>
-</td>
-<td></td>
+<div class="container-wrapper">
+    <div class="container">
+        <section>
+            <div class="jumbotron">
+                <div class="container">
+                    <h1>Cart</h1>
+                    <p>All the selected products in your shopping cart</p>
+                </div>
+            </div>
+        </section>
 
-</tr>
-</c:forEach>
-</table>
-Total Price:${grandTotal }
-</div>
-</div>
-</body>
-</html>
- <%@ include file="Footer.jsp" %>
+        <section class="container" ng-app="cartApp">
+
+            <div ng-controller = "cartCtrl" ng-init="initCartId('${cartId}')">
+
+                <div>
+                    <a class="btn btn-danger pull-left" ng-click = "clearCart()"><span class="glyphicon glyphicon-remove-sign"></span> Clear Cart</a>
+                    <a href="<spring:url value="/order/${cartId}" />" class="btn btn-success pull-right"><span class="glyphicon glyphicon-shopping-cart"></span> Check out</a>
+                </div>
+
+                <br/><br/><br/>
+
+                <table class="table table-hover">
+                    <tr>
+                        <th>Product</th>
+                        <th>Unit Price</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr ng-repeat = "item in cart.cartItems">
+                        <td>{{item.product.productName}}</td>
+                        <td>{{item.product.productPrice}}</td>
+                        <td>{{item.quantity}}</td>
+                        <td>{{item.totalPrice}}</td>
+                        <td><a href="#" class="label label-danger" ng-click="removeFromCart(item.product.productId)"><span class="glyphicon glyphicon-remove"></span>remove</a></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th>Grand Total</th>
+                        <th>{{calGrandTotal()}}</th>
+                        <th></th>
+                    </tr>
+                </table>
+
+                <a href="<spring:url value="" />" class="btn btn-default">Continue Shopping</a>
+            </div>
+        </section>
+
+<!-- My -->
+<script src="<c:url value="/resources/js/Controller.js" /> "></script>
+
+<%@ include file="Footer.jsp" %>

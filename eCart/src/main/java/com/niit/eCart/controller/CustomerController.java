@@ -36,7 +36,7 @@ public class CustomerController {
 	//we use  @modelattribute(command name) to read the values that user has entered in the jsp page.
 	@RequestMapping("/all/savecustomer")
 	public String addCustomer(@Valid @ModelAttribute("customer") Customer customer, BindingResult result, Model model) {
-		/*List<Customer> customerList = customerService.getAllCustomers();
+	List<Customer> customerList = customerService.getAllCustomers();
 		for (int i=0; i< customerList.size(); i++){
             if(customer.getEmail().equals(customerList.get(i).getEmail())){
                 model.addAttribute("emailMsg", "Email already exists");
@@ -49,12 +49,9 @@ public class CustomerController {
 
                 return "signUpForm";
             }
-        }*/
+        }
 		customerService.saveOrUpdateCustomer(customer);
 		return "logInCart";
 	}
 	
 }
-
-
-

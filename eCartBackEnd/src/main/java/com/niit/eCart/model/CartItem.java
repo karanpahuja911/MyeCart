@@ -58,5 +58,3 @@ package com.niit.eCart.model;
 		}	
 
 	}
-
-	

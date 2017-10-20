@@ -4,4 +4,7 @@ import com.niit.eCart.model.Cart;
 
 public interface CartService {
 	Cart getCart(int cartId);
+
+	 void update(Cart cart);
 	}
+

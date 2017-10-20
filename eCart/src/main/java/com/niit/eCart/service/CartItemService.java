@@ -1,17 +1,16 @@
 package com.niit.eCart.service;
 
+import com.niit.eCart.model.Cart;
 import com.niit.eCart.model.CartItem;
 
 public interface CartItemService {
 
 	    void addCartItem(CartItem cartItem);
 
-		void removeAllCartItems(int cartId);
+	    void removeCartItem(CartItem cartItem);
 
-		void removeCartItem(int cartItemId);
+	    void removeAllCartItems(Cart cart);
 
-		
-
-	    
+	    CartItem getCartItemByProductId(int productId);
 
 	}

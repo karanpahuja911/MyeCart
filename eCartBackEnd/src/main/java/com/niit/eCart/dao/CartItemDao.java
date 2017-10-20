@@ -1,12 +1,16 @@
 package com.niit.eCart.dao;
 
+import com.niit.eCart.model.Cart;
 import com.niit.eCart.model.CartItem;
 
 public interface CartItemDao {
 
 	    void addCartItem(CartItem cartItem);
+	    void removeCartItem(CartItem cartItem);
 
-		void removeCartItem(int cartId);
+	    void removeAllCartItems(Cart cart);
+
+	    CartItem getCartItemByProductId(int productId);
 
 	 
 	}

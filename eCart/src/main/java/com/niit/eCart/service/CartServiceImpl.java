@@ -14,4 +14,7 @@ private CartDao cartDao;
 		return cartDao.getCart(cartId);
 	}
 
+	   public void update(Cart cart){
+	        cartDao.update(cart);
+	    }
 }

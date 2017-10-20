@@ -7,4 +7,3 @@ public interface CustomerOrderDao {
 	CustomerOrder createOrder(Cart cart);
 
 	}
-	

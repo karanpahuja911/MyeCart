@@ -1,6 +1,7 @@
 package com.niit.eCart.model;	
 
-	import java.util.Date;
+	import java.io.Serializable;
+import java.util.Date;
 
 	import javax.persistence.CascadeType;
 	import javax.persistence.Entity;
@@ -11,22 +12,22 @@ package com.niit.eCart.model;
 	import javax.persistence.ManyToOne;
 
 	@Entity
-	public class CustomerOrder {
+	public class CustomerOrder implements Serializable{
 		@Id
 		@GeneratedValue(strategy=GenerationType.AUTO)
 	private int orderId;
 	private Date purchaseDate;
 	@ManyToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="cart_id")
+	@JoinColumn(name="cartId")
 	private Cart cart;
 	@ManyToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="customer_id")
+	@JoinColumn(name="id")
 	private Customer customer;
 	@ManyToOne
-	@JoinColumn(name="billingaddress_id")
+	@JoinColumn(name="billsId")
 	private BillingAddress billingAddress;
 	@ManyToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="shippingaddress_id")
+	@JoinColumn(name="shipId")
 	private ShippingAddress shippingAddress;
 	public int getOrderId() {
 		return orderId;
@@ -66,4 +67,3 @@ package com.niit.eCart.model;
 	}
 
 	}
-
