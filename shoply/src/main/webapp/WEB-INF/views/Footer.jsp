@@ -3,14 +3,14 @@
    <h2><b></b></h2>
  
 <div class="text-right " align="justify" style:"padding">
-<font face="Papyrus" size="3" color="YellowGreen">Telephone: +91-8398937949<br>
+<font face="Papyrus" size="3" color="YellowGreen">Telephone: +91-9992163081<br>
 100% ORIGINAL guarantee for all products at eCartShopify.com
 <br>
 Return within  15 days of placing your order.<br>
 Get free delivery for every order above Rs. 1000 </font>
 </div>
 <div class="text-center">
-<h4><a href="#"> <font face="Papyrus" size="4" color="Tomato">All rights reserved</font> </a> <b>--</b> <a href="#"><font face="Papyrus" size="4" color="Tomato">Privacy Policy </font> </a> <b>--</b> <a href="#"><font face="Papyrus" size="5" color="Tomato">Terms & Conditions </font></a></h4>
+<h4><a href="AllRightReserved"> <font face="Papyrus" size="4" color="Tomato">All rights reserved</font> </a> <b>--</b> <a href="Contact"><font face="Papyrus" size="4" color="Tomato">Privacy Policy </font> </a> <b>--</b> <a href="Contact"><font face="Papyrus" size="5" color="Tomato">Terms & Conditions </font></a></h4>
 </div>
 
 <!-- Container (Contact Section) -->

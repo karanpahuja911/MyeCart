@@ -51,5 +51,11 @@ public class HomeController {
 		return "logInCart";
 }
 	
-	
+
+@RequestMapping("/AllRightReserved")
+public String AllRight()
+{
+	return "AllRightReserved";
+}
+
 }

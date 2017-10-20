@@ -147,7 +147,7 @@
       </div>
     </div>
     <div class="col-sm-4">
-      <p class="text-center"><strong> HOME & DECOR </strong></p><br>
+      <p class="text-center"><strong> HOME And DECOR </strong></p><br>
       <a href="#demo2" data-toggle="collapse">
         <img src="<c:url value="/resources/images/Decor5.jpg"/>" class="img-circle person" alt="Random Name" width="255" height="255">
       </a>
