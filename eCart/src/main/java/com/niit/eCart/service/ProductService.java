@@ -24,7 +24,5 @@ void editProduct(Product product);
 
 void AddCategory(Category category);
 
-
-
 }
 

@@ -34,6 +34,7 @@ public class CategoryController {
 		
 		return "Category";
 	}
+	
 
 	@RequestMapping("/all/product/searchbycategory")
 	public String selectByCategory(@RequestParam String searchCondition,Model model){
