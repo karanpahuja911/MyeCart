@@ -2,8 +2,8 @@ package com.niit.eCart.service;
 	
 	import java.util.List;
 
-	import org.springframework.beans.factory.annotation.Autowired;
-	import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.niit.eCart.dao.SupplierDao;
 import com.niit.eCart.model.Supplier;
