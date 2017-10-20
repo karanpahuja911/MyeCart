@@ -80,23 +80,23 @@ span.psw {
 	<form name="loginForm"
 		action="<c:url value="/j_spring_security_check"/>" method="post">
 
-		<label><strong><font face="Verdana"><mark>Username</mark></strong></font></label> <input type="text"
+		<label><strong><font face="Verdana"><mark>UserName</mark></strong></font></label> <input type="text"
 			placeholder="Enter Username" name="form-username" required> <br>
 		<label><strong><font face="Verdana"><mark>Password</mark></strong></font></label>
 		<input type="password" placeholder="Enter Password"
 			name="form-password" required>
 
 		<button type="submit">
-			<b>CLICK  To  LOGIN </b>
+			<b>CLICK  Here To  LOGIN </b>
 		</button>
 
 	</form>
-	<input type="checkbox" checked="checked"> Remember me
+	<input type="checkbox" checked="checked"> Remember Me
 
 
 	<div class="container" style="background-color: #f1f1f1">
 		<button type="button" class="cancelbtn">Cancel</button>
-		<span class="psw">Forgot <a href="#">password?</a></span>
+		<span class="psw">Forgot <a href="#">Password?</a></span>
 	</div>
 </div>
 <%@ include file="Footer.jsp"%>
